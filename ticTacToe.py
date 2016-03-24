@@ -49,23 +49,23 @@ def startGame(startingPlayer, board):
     # is happening. You do not need to modify any of the Python code        #
     #########################################################################
 
-    turn = startingPlayer # Detemines who goes first, X or O
-    for i in range(9): # Begins a for loop with a range of nine
-        printBoard(board) # Prints the initial board
+    turn = startingPlayer # detemines who goes first, X or O
+    for i in range(9): # begins a for loop with a range of nine
+        printBoard(board) # prints the initial board
         print('Turn for ' + turn + '. Move on which space?')
-        move = input()
-        board[move] = turn
-        if( checkWinner(board, 'X') ):
+        move = input() # gets the users turn
+        board[move] = turn # inserts either X or O depending on whose turn it is
+        if( checkWinner(board, 'X') ): # checks if X is the winner
             print('X wins!')
             break
-        elif ( checkWinner(board, 'O') ):
+        elif ( checkWinner(board, 'O') ): # checks is ) is the winner
             print('O wins!')
             break
     
-        if turn == 'X':
-            turn = 'O'
+        if turn == 'X': # switches the player
+            turn = 'O' # if current player is X then switch to O
         else:
-            turn = 'X'
+            turn = 'X' # else go back to X
         
-    printBoard(board)
+    printBoard(board) #print the board at its current state
     
