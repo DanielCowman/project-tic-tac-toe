@@ -25,13 +25,13 @@ def checkWinner(board, player):
     for x in range(len(WinCombo)): # for loop for the win combos
         winner = 0 #reset the winner counter after every loop
         for y in range(0,3): # for loop for the inner array of winCombo
-            print('winner = ' + str(winner)) #debugging
+            #print('winner = ' + str(winner)) #debugging
             if board[WinCombo[x][y]] == player: # checks if the current board tarray   equals
                 winner += 1 #inc the winner counter
                 if winner > 2: #if winner equals two winner has been found
                     return True #return true
                     exit # and exit the program.
-        print('----') #debugging
+        #print('----') #debugging
 
     # TO DO #################################################################
     # Write code in this function that checks the tic-tac-toe board         #
