@@ -19,8 +19,8 @@ def checkWinner(board, player):
 
     WinCombo = [ #winning combos for tic tac toe
                 ['top-L', 'top-M', 'top-R'], ['mid-L', 'mid-M', 'mid-R'], ['low-L', 'mid-M', 'low-R'], #vertical
-                ['top-L', 'mid-L', 'low-L'], ['top-M', 'mid-M', 'low-R'], ['top-R', 'mid-R', 'low-R'], #horizontal
-                ['top-L', 'mid-M', 'low-R'], ['low-L', 'low-M', 'low-R']] #diagonal
+                ['top-L', 'mid-L', 'low-L'], ['top-M', 'mid-M', 'low-M'], ['top-R', 'mid-R', 'low-R'], #horizontal
+                ['top-L', 'mid-M', 'low-R'], ['low-L', 'mid-M', 'top-R']] #diagonal
 
     for x in range(len(WinCombo)): # for loop for the win combos
         winner = 0 #reset the winner counter after every loop
